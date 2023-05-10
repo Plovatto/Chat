@@ -1,0 +1,31 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000C\u0000h\u0000a\u0000t\u0000\r\u0000 \u0000#\u0000 \u0000C\u0000h\u0000a\u0000t\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Plovatto/Chat.git"
+  },
+  "keywords": [
+    "api",
+    "chat",
+    "node",
+    "info"
+  ],
+  "author": "Plovatto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Plovatto/Chat/issues"
+  },
+  "homepage": "https://github.com/Plovatto/Chat#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^5.4.0"
+  }
+}
