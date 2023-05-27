@@ -1,30 +1,50 @@
-function listarSalas() {
-    return [
-    {
-    "_id": {
-    "$oid": "643ece43ea11e6e5b0421f10"
-    },
-    "nome ": "Guerreiros da Info Cimol",
-    "tipo": "publica"
-    },{
-    "_id": {
-    "Soid": "643ecec1ealle6e5b0421f12"
-    },
-    "nome": "Só os confirmados da INFO",
-    "tipo": "privada",
-    "chave": "at844haw"
-    },
-    {
-    "_id": {
-    "$oid": "643f22a2ea11e6e5b0421f18"
-    },
-    "nome": "Guerreiros da INFO",
-    "tipo":"publico"
-    }];}
-   
-    const db = require("./db");
-function listarSalas() {
-return db.findAll("salas");
-}
+const db = require("./db");
 
-module.exports = {listarSalas}
+function listarSalas() {
+   
+    let salas = db.findAll(salas);
+    
+    return salas;
+};
+   
+function registrarSala() {
+   
+   return db.findOne(salas);
+
+};
+
+function novaSala(){
+
+if(descricao=="publica"){
+
+return db.insertOne(salas);
+
+}};
+    
+let atualizarMensagens = async (sala, msgs)=>{
+
+    return db.updateOne(msgs);
+
+};
+
+let buscarMensagem = async (idsala, timestamp)=>{
+
+    let sala = await buscarSala(idsala);
+
+    if(sala.msgs){
+
+    let msgs=[];
+
+    sala.msgs.forEach((msg)=>{
+
+    if(msg.timestamp>=timestamp){
+
+    msgs.push(msg);
+
+};}); return msgs; };
+
+    return [];
+
+};
+
+module.exports = {listarSalas,registrarSala,novaSala,atualizarMensagens,buscarMensagem};
